@@ -1,0 +1,196 @@
+    /* Navbar */
+    
+    .navbar {
+        z-index: 1;
+        font-family: Viga;
+        position: relative;
+    }
+    
+    .nav-link {
+        margin-right: 30px;
+    }
+    
+    .navbar-brand {
+        font-family: Viga;
+        font-size: 32px;
+    }
+    /* My Layout */
+    
+    .jumbotron {
+        background-image: url(https://source.unsplash.com/1200x400?technologies);
+        background-size: cover;
+        height: 540px;
+        text-align: center;
+        position: relative;
+    }
+    
+    .jumbotron .container {
+        z-index: 1;
+        position: relative;
+    }
+    
+    .jumbotron .display-4 {
+        color: white;
+        margin-top: 150px;
+        font-weight: 200;
+        text-shadow: 1px, 1px, 1px;
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+    
+    .jumbotron .display-4 span {
+        font-weight: 500;
+        text-shadow: 1px, 1px, 1px;
+        color: white;
+    }
+    
+    .jumbotron::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+        position: absolute;
+        bottom: 0;
+    }
+    /* Layout About */
+    
+    .halaman-about {
+        height: 540px;
+        text-align: center;
+        position: relative;
+        background-image: url(../css/img/background-about.jpg);
+        background-size: cover;
+    }
+    
+    .halaman-about .container {
+        z-index: 1;
+        position: relative;
+    }
+    
+    .halaman-about .display-4 {
+        color: white;
+        margin-top: 50px;
+        font-weight: 200;
+        text-shadow: 1px, 1px, 1px;
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+    
+    .halaman-about .display-4 span {
+        font-weight: 500;
+        text-shadow: 1px, 1px, 1px;
+        color: white;
+    }
+    
+    .halaman-about .email {
+        color: white;
+    }
+    
+    .halaman-about .gambar {
+        margin-top: 100px;
+    }
+    /* info panel */
+    
+    .info-panel {
+        box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+        border-radius: 12px;
+        margin-top: -100px;
+        background-color: white;
+        padding: 30px;
+        text-align: center;
+    }
+    
+    .info-panel h4 {
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-top: 5px;
+    }
+    
+    .info-panel p {
+        font-size: 14px;
+        color: #ACACAC;
+        margin-top: -5px;
+        font-weight: 200;
+    }
+    /* Utility */
+    
+    .tombol {
+        border-radius: 40px;
+        font-family: Viga;
+        color: white !important;
+        background-color: rgba(#004dbe);
+    }
+    /* footer */
+    
+    footer.footer {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    
+    footer.footer .social-link {
+        display: block;
+        text-decoration: none;
+        height: 4rem;
+        width: 4rem;
+        line-height: 4.3rem;
+        font-size: 1.5rem;
+        background-color: #1D809F;
+        transition: background-color 0.15s ease-in-out;
+        box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+    }
+    
+    footer.footer .social-link:hover {
+        background-color: #155d74;
+        text-decoration: none;
+    }
+    /* Desktop Version */
+    
+    @media (min-width: 992px) {
+        .navbar-brand,
+        .nav-link {
+            text-shadow: 1px, 1px, 1px rgba(0, 0, 0, 0.7);
+            color: white !important;
+        }
+        .nav-link {
+            margin-right: 30px;
+        }
+        .form-signin .form-floating:focus-within {
+            z-index: 2;
+        }
+        .form-signin input[type="email"] {
+            margin-bottom: -1px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        .form-signin input[type="password"] {
+            margin-bottom: 10px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+        .form-registration input {
+            border-radius: 0;
+            margin-bottom: -1px;
+        }
+        .nav-link:hover::after {
+            content: "";
+            display: block;
+            border-bottom: 3px solid #0b63dc;
+            width: 50%;
+            margin: auto;
+            padding-bottom: 4px;
+            margin-bottom: -8px;
+        }
+        .jumbotron .display-4 {
+            font-size: 62px;
+        }
+        .jumbotron {
+            height: 640px;
+            margin-top: -75px;
+        }
+        .halaman-about {
+            height: 600px;
+            margin-top: -75px;
+        }
+    }
