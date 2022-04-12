@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 class AdminUserController extends Controller
 {
@@ -98,6 +99,8 @@ class AdminUserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        User::destroy($user->id);
+
+        return redirect('dashboard/users')->with('success', 'User has been deleted!');;
     }
 }

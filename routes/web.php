@@ -41,21 +41,25 @@ Route::get('/about', function () {
     ]);
 });
 
+Route::get('/welcome', function () {
+    return view('welcome');
+});
+
 Route::get('/posts', [PostController::class, 'index']);
 
 Route::get('posts/{post:slug}', [PostController::class, 'show']);
 
 Route::get('/categories', [CategoryController::class, 'index']);
 
-Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+// Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 
-Route::post('/login', [LoginController::class, 'authenticate']);
+// Route::post('/login', [LoginController::class, 'authenticate']);
 
-Route::post('/logout', [LoginController::class, 'logout']);
+// Route::post('/logout', [LoginController::class, 'logout']);
 
-Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
+// Route::get('/register', [RegisterController::class, 'index'])->name('register')->middleware('guest');
 
-Route::post('/register', [RegisterController::class, 'create']);
+// Route::post('/register', [RegisterController::class, 'create']);
 
 Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'checkSlug'])->middleware('auth');
 
